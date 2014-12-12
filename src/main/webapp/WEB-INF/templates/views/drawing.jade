@@ -1,0 +1,36 @@
+- import org.scalatra.Canvas.Canvas
+- import org.scalatra.Display
+- attributes("title") = "DrawingApp"
+- attributes("headline") = "Welcome to this supercool drawing app"
+-@ import val canvas: String
+
+h3= "Are you the new Picasso?"
+
+p
+  != canvas
+
+h3
+  |draw line
+form(name="line" action="/line" method="post")
+  input(placeholder="x1-coordinate" type="text" name="x1-coordinate")
+  input(placeholder="y1-coordinate" type="text" name="y1-coordinate")
+  input(placeholder="x2-coordinate" type="text" name="x2-coordinate")
+  input(placeholder="y2-coordinate" type="text" name="y2-coordinate")
+  input(type="submit" value="Draw")
+
+h3
+  |rectangle
+form(name="rectangle" action="/rectangle" method="post")
+  input(placeholder="x1-coordinate" type="text" name="x1-coordinate")
+  input(placeholder="y1-coordinate" type="text" name="y1-coordinate")
+  input(placeholder="x2-coordinate" type="text" name="x2-coordinate")
+  input(placeholder="y2-coordinate" type="text" name="y2-coordinate")
+  input(type="submit" value="Draw")
+
+h3
+  |bucketfill
+form(name="bucketfill" action="/bucketfill" method="post")
+  input(placeholder="x1-coordinate" type="text" name="x1-coordinate")
+  input(placeholder="x2-coordinate" type="text" name="y1-coordinate")
+  input(placeholder="color" type="text" name="x2-coordinate")
+  input(type="submit" value="Draw")

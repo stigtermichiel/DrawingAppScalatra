@@ -1,0 +1,14 @@
+- attributes("title") = "DrawingApp"
+- attributes("headline") = "Welcome to this supercool drawing app!"
+
+h3= "Are you the new Picasso?"
+
+p= "Please fill in the fields below to begin!"
+
+form(name="canvas" action="/draw" method="post")
+  input(placeholder="horizontal size" type="text" name="horizontal")
+  input(placeholder="vertical size" type="text" name="vertical")
+  input(type="submit" value="draw")
+
+
+
